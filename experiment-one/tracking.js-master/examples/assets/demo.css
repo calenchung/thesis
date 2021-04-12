@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  src:url("../assets/UntitledSerif-Regular.otf");
+  font-family: "UntitledSerif";
+}
+
+@font-face {
+  src:url("../assets/UntitledSerif-RegularItalic.otf");
+  font-family: "UntitledSerif-Italic";
+}
+
+video, canvas {
+  margin-left: 230px;
+  margin-top: 120px;
+  position: absolute;
+}
+
+.demo-title a {
+  text-decoration: none;
+}
+
+.demo-title p {
+  color: #fff;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 15px;
+}
+
+
+.demo-container {
+  width: 89vw;
+  height: 100vh;
+  position: absolute;
+  background: #fff;
+  overflow: hidden;
+  right: 0vw;
+}
+
+.dg.ac {
+  z-index: 100 !important;
+  top: 50px !important;
+}
+
+.button {
+    font-family: 'UntitledSerif';
+    background-color: white;
+    cursor:pointer;
+    align: center;
+    position: relative;
+    top: 80vh;
+    margin-left: 10px;
+    height: 40px;
+    color: black;
+    border: black solid 2px;
+    font-size: 100%;
+    left: -6vw;
+    padding: 8px 20px 20px 20px;
+
+}
+
+.button:hover {
+  color: red;
+  border: red solid 2px;
+  font-family: 'UntitledSerif-Italic';
+  text-decoration: none;
+  outline: none;
+}
+
+.button:focus {
+  color: red;
+  border: red solid 2px;
+  font-family: 'UntitledSerif-Italic';
+  text-decoration: none;
+  outline: none;
+}
+
+.button2 {
+    font-family: 'UntitledSerif';
+    background-color: white;
+    cursor:pointer;
+    align: center;
+    position: relative;
+    top: 80vh;
+    margin-left: 10px;
+    height: 40px;
+    color: black;
+    border: black solid 0px;
+    font-size: 100%;
+    left: -6vw;
+    padding: 8px 20px 20px 20px;
+
+}
+
+.button2:hover {
+  color: red;
+  border: red solid 0px;
+  font-family: 'UntitledSerif-Italic';
+  text-decoration: none;
+  outline: none;
+}
+
+
+.text {
+  font-family: 'UntitledSerif';
+  font-weight: 300;
+  font-size: 30px;
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  top: 5vh;
+  left: -6vw;
+  color: black;
+}
+
+p::selection {
+  background: red;
+  color: black;
+}
+
+br::selection {
+  background: red;
+  color: black;
+}
+
+a::selection {
+  background: red;
+  color: white;
+}
+
+button::selection {
+  background: red;
+  color: white;
+}
