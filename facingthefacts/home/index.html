@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Facing the Facts</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="icon" href="icon.png" type="image" sizes="16x16">
+
+		<style>
+
+		* {
+			margin:0;
+			outline:none !important;
+		}
+
+		@font-face {
+		  src:url("fonts/UntitledSerifTest-Regular.otf");
+		  font-family: "UntitledSerif";
+		}
+
+		@font-face {
+		  src:url("fonts/UntitledSerifTest-RegularItalic.otf");
+		  font-family: "UntitledSerif-Italic";
+		}
+
+			body {
+				font-family: 'UntitledSerif';
+				color: #FFFFFF;
+				background-color: #202020;
+				overflow-x: hidden;
+			}
+
+			.gradient {
+				position: absolute;
+				height: 270vw;
+				width: 100vw;
+				background-image: linear-gradient(#FFFFFF, #FFFFFF, #000000, #000000, #FFFFFF 70%);
+			}
+
+			#blocker {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+
+			#container {
+				position: absolute;
+				top:80vw;
+			}
+
+			#container::focus {
+				outline:none !important;
+			}
+
+			#container::selection {
+				outline:none !important;
+			}
+
+			.container-background {
+				width: 100vw;
+				height: 65vw;
+				position: absolute;
+				top:84vw;
+				left:0;
+				background-image: url(../experiment-one/assets/imgs/background.png);
+				background-size: 100vw 65vw;
+				background-repeat:no-repeat;
+				opacity: 85%;
+			}
+
+
+			.title {
+				position: absolute;
+				top: 30vw;
+				left: 4vw;
+				background-color:black;
+				color: black;
+				width: 10vw;
+				padding: 2vw 6vw 2vw 6vw;
+			}
+
+			.title2 {
+				position: absolute;
+				top: 30vw;
+				left: 74vw;
+				background-color:black;
+				color: black;
+				width: 10vw;
+				padding: 2vw 6vw 2vw 6vw;
+			}
+
+			h1 {
+				font-size: 28px;
+				font-weight: 400;
+			}
+
+			p, a {
+				font-size: 21px;
+				color: #FFFFFF;
+			}
+
+			.italic {
+				font-family: 'UntitledSerif-Italic';
+			}
+
+			.link {
+			  text-decoration: none;
+			  color: red;
+			  font-family: "UntitledSerif-Italic";
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+				color: #FF0000;
+				font-family: 'UntitledSerif-Italic';
+			}
+
+			.experiment {
+				position: absolute;
+				width: 100vw;
+				height: 80vw;
+			}
+
+			.facts {
+				width: 100vw;
+				height: 80vw;
+			}
+
+			.container2 {
+				position: fixed;
+				height: 30vw;
+			  padding: 3vw;
+			}
+
+			img {
+			  width: 3.8%;
+			  padding: 2vw 2vw 2vw 2vw;
+			}
+
+			.two {
+			  top: 3.5vh;
+			}
+
+			.three {
+			  top: 5vh;
+			}
+			.smaller {
+				font-size: 16px;
+			}
+
+			.text-p {
+			  font-family: 'UntitledSerif';
+			  font-weight: 300;
+			  font-size: 21px;
+			  position: absolute;
+				top: 0;
+			  text-decoration: none;
+			  text-align: left;
+			  align-items: center;
+			  width: 45%;
+			  padding: 4% 28% 7% 28%;
+			  color: black;
+			  line-height: 28px;
+				z-index: 100000;
+			}
+
+			.highlight {
+				padding: 2px 2px 2px 2px;
+			  background-color: #FFFFFF;
+			}
+
+			#index {
+				width: 100vw;
+				height: 130vw;
+				top: 135vw;
+				position: absolute;
+				color: black;
+			}
+
+			.resources {
+				position: absolute;
+				top: 0;
+				margin-left: 30vw;
+				margin-top: 7vw;
+				width: 40%;
+				padding-bottom: 8vw;
+				z-index: 1000;
+			}
+
+			.topic {
+				text-decoration: none;
+			  text-align: left;
+			  align-items: center;
+				margin-top: 7vw;
+				color: #202020;
+				font-size: 21px;
+				line-height: 28px;
+			}
+
+			.topicname {
+				font-family: 'UntitledSerif-Italic';
+				color: #FF0000;
+			}
+
+			.resource {
+				font-family: 'UntitledSerif-Regular';
+				color: #000000;
+				font-size: 16px;
+				background-color: white;
+			}
+
+			.credits {
+				color: #202020;
+				font-size: 16px;
+				line-height: 22px;
+				background-color: white;
+			}
+
+			.creds {
+				margin-top: 5vw;
+			}
+
+			::-webkit-scrollbar {
+			  width: 5px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+				background-color: #FFFFFF;
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			  background: #202020;
+			  border-radius: 5px;
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+			  background: #FFFFFF;
+			}
+
+			h1::selection {
+			  background: #FF0000;
+			  color: #202020;
+			}
+
+			span::selection {
+				background: #FF0000;
+				color: #202020;
+			}
+
+			p::selection {
+			  background: #FF0000;
+			  color: #202020;
+			}
+
+			br::selection {
+			  display: none;
+			}
+
+			a::selection {
+			  background: #FF0000;
+			  color: #202020;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="gradient">
+		<div class="experiment">
+			<div class="facts">
+				<div class ="container2">
+					<img id="mainImage2" src="../experiment-one/assets/gifs/01.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/02.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/04.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/03.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/05.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/06.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/07.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/08.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/09.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/10.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/11.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/12.gif"/>
+
+					<img id="mainImage2" src="../experiment-one/assets/gifs/13.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/14.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/15.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/16.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/17.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/18.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/19.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/20.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/21.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/22.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/23.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/24.gif"/>
+
+					<img id="mainImage2" src="../experiment-one/assets/gifs/25.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/27.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/28.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/29.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/30.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/31.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/32.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/16.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/26.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/03.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/05.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/06.gif"/>
+
+					<img id="mainImage2" src="../experiment-one/assets/gifs/07.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/17.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/10.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/02.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/19.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/15.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/26.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/11.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/13.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/32.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/33.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/34.gif"/>
+
+					<img id="mainImage2" src="../experiment-one/assets/gifs/35.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/36.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/37.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/38.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/39.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/24.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/17.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/01.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/18.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/02.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/23.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/27.gif"/>
+
+					<img id="mainImage2" src="../experiment-one/assets/gifs/38.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/39.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/28.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/29.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/30.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/07.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/21.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/05.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/14.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/07.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/20.gif"/>
+					<img id="mainImage2" src="../experiment-one/assets/gifs/09.gif"/>
+
+
+				</div>
+
+			<p class="text-p"><span class="highlight">
+				False positives: Using the higher quality Application photos, false positive rates are highest in West and East African and East Asian people, and lowest in Eastern European individuals.
+					<br><br>
+				With a number of algorithms developed in China this effect is reversed, with low false positive rates on East Asian faces.
+					<br><br>
+				With domestic law enforcement images, the highest false positives are in American Indians, with elevated rates in African American and Asian populations; the relative ordering depends on sex and varies with algorithm.
+					<br><br>
+				False positives are found to be higher in women than men, and this is consistent across algorithms and datasets. This effect is smaller than that due to race.
+					<br><br>
+				There are elevated false positives in the elderly and in children; the effects were larger in the oldest and youngest, and smallest in middle-aged adults.
+					<br><br>
+				With domestic mugshots, false negatives are higher in Asian and American Indian individuals, with error rates above those in white and African American faces (which yield the lowest false negative rates).
+					<br><br>
+				With lower-quality border crossing images, false negatives are generally higher in people born in Africa and the Caribbean, the effect being stronger in older individuals.
+				<br><br>
+				<span class="smaller">
+				For more information about
+				<br>
+				<a class="link smaller" href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html">Robert Julian-Borchak Williams</a>
+				<br><br>
+				Writings and images from the <a class="link smaller" href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf">National Institute of Standards and Technology</a>
+				<br></span>
+				<!-- <span class="smaller">
+				<a class="link" href="../index.html">restart</a>
+				<br><br>
+				For more information about
+				<br>
+				<a class="link" href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html">Robert Julian-Borchak Williams</a>
+				<br>
+				<a class="link" href="https://www.nist.gov/itl/iad/image-group/special-database-32-multiple-encounter-dataset-meds">Data Sets</a>
+				<br><br>
+				Writings and images from the <a class="link" href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf">National Institute of Standards and Technology</a>
+				<br><br>
+				For more information visit <a class="link" href="https://calenchung.github.io/thesis/facing-the-facts/home/index.html">Facing the Facts</a> -->
+				</span>
+			</span></p>
+			</div>
+		</div>
+		<div class="container-background"></div>
+		<div id="container">
+			<div class="title">
+				<p class="italic">Drag to rotate</p>
+			</div>
+			<div class="title2">
+				<p class="italic">Drag to rotate</p>
+			</div>
+		</div>
+		<div id="blocker"></div>
+		<div id="index">
+				<div class="resources">
+				<p class="topic"><span class="highlight topicname">In the Media<br><br>
+						<a class="resource" href="https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/">The Invention of Ethical AI</a><br>
+						<a class="resource" href="https://time.com/5520558/artificial-intelligence-racial-gender-bias/">AI Racial Gender Bias</a><br>
+						<a class="resource" href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html">Wrongfully Accused by an Algorithim</a><br>
+						<a class="resource" href="https://onezero.medium.com/we-must-fight-face-surveillance-to-protect-black-lives-5ffcd0b4c28a">We Must Fight Face Surveillance to Protect Black Lives</a><br>
+						<a class="resource" href="https://www.theverge.com/2020/8/14/21368930/clearview-ai-ice-contract-privacy-immigration">ICE just signed a contract with facial recognition company Clearview AI</a><br>
+						<a class="resource" href="https://www.theatlantic.com/technology/archive/2020/07/defund-facial-recognition/613771/">Defund Facial Recognition</a><br>
+						<a class="resource" href="https://www.nytimes.com/2019/07/26/technology/hong-kong-protests-facial-recognition-surveillance.html">Hong Kong Protests Facial Recognition Surveillance</a><br>
+						<a class="resource" href="https://www.cnbc.com/2019/10/04/governments-must-ensure-fair-transparent-use-of-facial-recognition-wef.html">Facial recognition technology needs controls on its use, World Economic Forum says</a><br>
+						<a class="resource" href="https://blogs.microsoft.com/on-the-issues/2018/07/13/facial-recognition-technology-the-need-for-public-regulation-and-corporate-responsibility/">Microsoft: Facial recognition technology: The need for public regulation and corporate responsibility</a><br>
+						<a class="resource" href="https://www.techrepublic.com/article/detroit-police-admit-to-first-facial-recognition-mistake-after-false-arrest/">Detroit police admit to first facial recognition mistake after false arrest</a></span></p>
+
+			<p class="topic"><span class="highlight topicname">Direct Sources<br><br>
+						<a class="resource" href="https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software">NIST Study Evaluates Effects of Race, Age, Sex on Facial Recognition Software</a><br>
+						<a class="resource" href="https://pages.nist.gov/frvt/reports/demographics/annexes/annex_01.pdf">NIST Face Recognition Demographics</a><br>
+						<a class="resource" href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf">NIST Face Recognition Identification</a><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/847">116th Congress Commercial Facial Recognition Privacy Act of 2019</a><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/4084">116th Congress Facial Recognition and Biometric Technology Moratorium Act of 2020</a><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/house-bill/7120?q=%7B%22search%22%3A%5B%22justice+in+policing%22%5D%7D&s=1&r=1">116th Congress Justice in Policing Act of 2020</a><br>
+						<a class="resource" href="https://www.ojp.gov/pdffiles1/nij/252038.pdf">National Institute of Justice: Using Artificial Intelligence to Address Criminal Justice Needs</a>
+					</span></p>
+
+				<p class="topic"><span class="highlight topicname">Take Action<br><br>
+						<a class="resource" href="https://www.ajl.org/">Algorithmic Justice League</a><br>
+						<a class="resource" href="https://notechforice.com/">NoTechForIce</a><br>
+						<a class="resource" href="https://colorofchange.org/">Color of Change</a><br>
+						<a class="resource" href="https://d4bl.org/">Data for Black Lives</a><br>
+						<a class="resource" href="https://www.aclum.org/en/technology-liberty">Technology for Liberty</a><br>
+						<a class="resource" href="https://www.fightforthefuture.org/">Fight for the Future</a><br>
+						<a class="resource" href="https://movementalliance.org/blog/project/peoples-algorithmic-power-project/">Movement Alliance - People's Algorithmic Power Project </a>
+					</span></p>
+
+				<p class="topic"><span class="highlight topicname">In the Arts<br><br>
+						<a class="resource" href="http://jingcailiu.com/wearable-face-projector/">Wearable Face Projector</a><br>
+						<a class="resource" href="https://cvdazzle.com/">Computer Vision Data Camouflage</a><br>
+						<a class="resource" href="https://www.pacegallery.com/journal/trevor-paglens-imagenet-roulette-featured-new-york-times/">ImageNet Roulette</a><br>
+						<a class="resource" href="https://www.cooperhewitt.org/events/current-exhibitions/face-values/">Face Values</a><br>
+						<a class="resource" href="https://ars.electronica.art/center/en/gendershades/">Gender Shades</a>
+					</span></p>
+
+				<p class="credits creds">This is an ongoing collection effort by <a class="credits" href="https://calenchung.design/about">Calen Chung</a> for her <a class="credits" href="https://www.calenchung.design/home-1/thesis">Senior Thesis.</a></p>
+				<p class="credits">
+				Last updated April 2021</p>
+
+			</div>
+		</div>
+</div>
+
+
+		<script type="module">
+
+
+			import * as THREE from '../build/three.module.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import { CSS3DRenderer, CSS3DObject } from './jsm/renderers/CSS3DRenderer.js';
+			import { BasisTextureLoader } from './jsm/loaders/BasisTextureLoader.js';
+
+			var camera, scene, renderer;
+			var controls;
+
+			var Element = function ( id, x, y, z, ry ) {
+
+				var div = document.createElement( 'div' );
+				div.style.width = '480px';
+				div.style.height = '360px;';
+				div.style.backgroundColor = '#000';
+
+				var iframe = document.createElement( 'iframe' );
+				iframe.style.width = '480px';
+				iframe.style.height = '360px';
+				iframe.style.border = '0px';
+				iframe.src = [ 'https://', id, '?rel=0' ].join( '' );
+				div.appendChild( iframe );
+
+				var object = new CSS3DObject( div );
+				object.position.set( x, y, z );
+				object.rotation.y = ry;
+
+				return object;
+
+			};
+
+			init();
+			animate();
+
+			function init() {
+
+				var container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 3000 );
+				camera.position.set( 0, 0, 1980 );
+
+
+				scene = new THREE.Scene();
+
+				renderer = new CSS3DRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				// const geometry = new THREE.CylinderGeometry( 100, 100, 200, 320 );
+				// const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+				// const cylinder = new THREE.Mesh( geometry, material );
+				// scene.add( cylinder );
+
+				var group = new THREE.Group();
+
+				//SIX BACK GROUP
+				group.add( new Element( 'd4bl.org/about.html', 0, 1200, -600, -600 ) );
+				group.add( new Element( 'notechforice.com/', -400, 100, -375, 400 ) );
+				group.add( new Element( 'colorofchange.org/', -400, -1100, -375, 400 ) );
+				group.add( new Element( 'faception.com/about-us', 0, -1400, -600, -600 ) );
+
+
+				//FIVE CORNER BACK L
+				group.add( new Element( 'embed.ted.com/talks/lang/en/joy_buolamwini_how_i_m_fighting_bias_in_algorithms', -400, 800, -375, 400 ) );
+				group.add( new Element( 'clearview.ai/', 0, 500, -600, -600 ) );
+				group.add( new Element( 'findface.pro/en/', 0, -800, -600, -600 ) );
+
+
+				//FOUR CORNER FRONT L
+				group.add( new Element( 'ajl.org/avbp', -400, 400, 75, 200 ) );
+				group.add( new Element( 'player.vimeo.com/video/414917737', -400, -100, 75, 200 ) );
+
+
+				// THREE MIDDLE FRONT
+				group.add( new Element( 'youtube.com/embed/7lpCWxlRFAw', 0,100, 300, 0 ) );
+				group.add( new Element( 'fightforthefuture.org/', 0, -400, 300, 0 ) );
+
+
+				// TWO CORNER FRONT R
+				group.add( new Element( 'youtube.com/embed/pxZk6IQxaLY', 400, -200, 75, -200 ) );
+				group.add( new Element( 'movementalliance.org/blog/project/peoples-algorithmic-power-project/', 400, -700, 75, -200 ) );
+
+
+				// ONE CORNER BACK R
+				group.add( new Element( 'salon.com/2020/06/02/police-are-using-protests-as-an-excuse-to-unleash-new-surveillance-tech/', 400, -600, -375, -400 ) );
+				group.add( new Element( 'youtube.com/embed/mq1DFQTlVyQ', 400, -1250, -375, -400 ) );
+
+
+				scene.add( group );
+
+
+
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.rotateSpeed = 1;
+				controls.enablePan = true;
+				controls.enableZoom = false;
+				controls.target.set( 0, 0, 0 );
+				controls.minDistance = 500;
+				controls.maxDistance = 1200;
+				controls.enableDamping = true;
+				controls.dampingFactor = 0.05;
+				controls.screenSpacePanning = false;
+
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Block iframe events when dragging camera
+
+				var blocker = document.getElementById( 'blocker' );
+				blocker.style.display = 'none';
+
+				controls.addEventListener( 'start', function () {
+
+					blocker.style.display = '';
+
+				} );
+				controls.addEventListener( 'end', function () {
+
+					blocker.style.display = 'none';
+
+				} );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				controls.update();
+				renderer.render( scene, camera );
+
+			}
+
+			function onMouseWheel(event) {
+
+		  event.preventDefault();
+
+		  group.rotation.y += event.deltaY * 0.05;
+		}
+
+
+
+		</script>
+	</body>
+</html>
