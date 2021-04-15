@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-*:focus:not(.focus-visible) {
-  outline: none;
-}
 
 @font-face {
   src:url("../assets/UntitledSerif-Regular.otf");
