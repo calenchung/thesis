@@ -156,5 +156,25 @@ a::selection {
 }
 
 .container {
-  user-select: none; /* Non-prefixed version, currently
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #F3F2EF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #red;
 }
