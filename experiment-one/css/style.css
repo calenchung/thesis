@@ -63,9 +63,9 @@ body {
   position: absolute;
   text-decoration: none;
   text-align: left;
-  align-items: center;
-  width: 100%;
-  padding: 4% 28% 7% 28%;
+  margin-left: 27vw;
+  width: 45%;
+  padding: 4% 0 7% 0;
   color: black;
   line-height: normal;
 }
@@ -89,6 +89,12 @@ body {
 img {
   width: 8%;
   padding: 1.6vw 2vw 2vw 2vw;
+}
+
+img:hover {
+  background-image: 'none';
+  background-color: red;
+
 }
 
 .link {
@@ -131,6 +137,8 @@ span::selection {
   background: red;
   color: black;
 }
+
+
 
 p::selection {
   background: red;
