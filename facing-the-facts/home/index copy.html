@@ -99,62 +99,45 @@
 				padding: none;
 				z-index: 1000;
 			}
-			.highlight {
-				padding: 2px 2px 2px 2px;
-			  background-color: #FFFFFF;
-			}
 
 			#index {
 				width: 100vw;
-				height: 100vw;
-				top: 60vw;
+				background-color: #F3F2EF;
 				position: absolute;
+				top: 0;
+				left:0;
+				z-index: 1000;
 				color: black;
+				overflow-x: hidden;
+				display: none;
 			}
 
 			.resources {
-				/* position: absolute; */
-				top: 0;
 				margin-left: 30vw;
 				margin-top: 7vw;
 				width: 40%;
 				padding-bottom: 8vw;
-				z-index: 1000;
 			}
 
 			.topic {
-				text-decoration: none;
-			  text-align: left;
-			  align-items: center;
-				margin-top: 7vw;
+				margin-top: 4vw;
 				color: #202020;
-				font-size: 21px;
-				line-height: 28px;
-			}
-
-			.topicname {
-				font-family: 'UntitledSerif-Italic';
-				color: #FF0000;
+				font-size: 30px;
+				padding-bottom: 2vw;
 			}
 
 			.resource {
-				font-family: 'UntitledSerif-Regular';
-				color: #000000;
-				font-size: 16px;
-				background-color: white;
+				color: #202020;
+				font-size: 21px;
+				line-height: 27px;
 			}
 
 			.credits {
+				padding-top: 5vw;
 				color: #202020;
-				font-size: 16px;
+				font-size: 18px;
 				line-height: 22px;
-				background-color: white;
 			}
-
-			.creds {
-				margin-top: 5vw;
-			}
-
 
 			.button2 {
 				position: absolute;
@@ -210,9 +193,6 @@
 			  color: #202020;
 			}
 
-			#container {
-				position: fixed;
-			}
 		</style>
 	</head>
 	<body>
@@ -225,56 +205,78 @@
 			<div class="thesis2">
 				<a href="https://calenchung.github.io/thesis/experiment-one/index.html" class="link">What Would I score?</a>
 			</div>
+			<a href="#" id="open" class="button">Index</a>
 		</div>
 		<div id="blocker"></div>
 		<div id="index">
-					<div class="resources">
-					<p class="topic"><span class="highlight topicname">In the Media<br><br>
-							<a class="resource" href="https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/">The Invention of Ethical AI</a><br>
-							<a class="resource" href="https://time.com/5520558/artificial-intelligence-racial-gender-bias/">AI Racial Gender Bias</a><br>
-							<a class="resource" href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html">Wrongfully Accused by an Algorithim</a><br>
-							<a class="resource" href="https://onezero.medium.com/we-must-fight-face-surveillance-to-protect-black-lives-5ffcd0b4c28a">We Must Fight Face Surveillance to Protect Black Lives</a><br>
-							<a class="resource" href="https://www.theverge.com/2020/8/14/21368930/clearview-ai-ice-contract-privacy-immigration">ICE just signed a contract with facial recognition company Clearview AI</a><br>
-							<a class="resource" href="https://www.theatlantic.com/technology/archive/2020/07/defund-facial-recognition/613771/">Defund Facial Recognition</a><br>
-							<a class="resource" href="https://www.nytimes.com/2019/07/26/technology/hong-kong-protests-facial-recognition-surveillance.html">Hong Kong Protests Facial Recognition Surveillance</a><br>
-							<a class="resource" href="https://www.cnbc.com/2019/10/04/governments-must-ensure-fair-transparent-use-of-facial-recognition-wef.html">Facial recognition technology needs controls on its use, World Economic Forum says</a><br>
-							<a class="resource" href="https://blogs.microsoft.com/on-the-issues/2018/07/13/facial-recognition-technology-the-need-for-public-regulation-and-corporate-responsibility/">Microsoft: Facial recognition technology: The need for public regulation and corporate responsibility</a><br>
-							<a class="resource" href="https://www.techrepublic.com/article/detroit-police-admit-to-first-facial-recognition-mistake-after-false-arrest/">Detroit police admit to first facial recognition mistake after false arrest</a></span></p>
+				<div class="resources">
+				<p class="topic">In the Media</p>
+						<a class="resource" href="https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/">The Invention of Ethical AI</a><br><br>
+						<a class="resource" href="https://time.com/5520558/artificial-intelligence-racial-gender-bias/">AI Racial Gender Bias</a><br><br>
+						<a class="resource" href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html">Wrongfully Accused by an Algorithim</a><br><br>
+						<a class="resource" href="https://onezero.medium.com/we-must-fight-face-surveillance-to-protect-black-lives-5ffcd0b4c28a">We Must Fight Face Surveillance to Protect Black Lives</a><br><br>
+						<a class="resource" href="https://www.theverge.com/2020/8/14/21368930/clearview-ai-ice-contract-privacy-immigration">ICE just signed a contract with facial recognition company Clearview AI</a><br><br>
+						<a class="resource" href="https://www.theatlantic.com/technology/archive/2020/07/defund-facial-recognition/613771/">Defund Facial Recognition</a><br><br>
+						<a class="resource" href="https://www.nytimes.com/2019/07/26/technology/hong-kong-protests-facial-recognition-surveillance.html">Hong Kong Protests Facial Recognition Surveillance</a><br><br>
+						<a class="resource" href="https://www.cnbc.com/2019/10/04/governments-must-ensure-fair-transparent-use-of-facial-recognition-wef.html">Facial recognition technology needs controls on its use, World Economic Forum says</a><br><br>
+						<a class="resource" href="https://blogs.microsoft.com/on-the-issues/2018/07/13/facial-recognition-technology-the-need-for-public-regulation-and-corporate-responsibility/">Microsoft: Facial recognition technology: The need for public regulation and corporate responsibility</a><br><br>
+						<a class="resource" href="https://www.techrepublic.com/article/detroit-police-admit-to-first-facial-recognition-mistake-after-false-arrest/">Detroit police admit to first facial recognition mistake after false arrest</a>
 
-				<p class="topic"><span class="highlight topicname">Direct Sources<br><br>
-							<a class="resource" href="https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software">NIST Study Evaluates Effects of Race, Age, Sex on Facial Recognition Software</a><br>
-							<a class="resource" href="https://pages.nist.gov/frvt/reports/demographics/annexes/annex_01.pdf">NIST Face Recognition Demographics</a><br>
-							<a class="resource" href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf">NIST Face Recognition Identification</a><br>
-							<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/847">116th Congress Commercial Facial Recognition Privacy Act of 2019</a><br>
-							<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/4084">116th Congress Facial Recognition and Biometric Technology Moratorium Act of 2020</a><br>
-							<a class="resource" href="https://www.congress.gov/bill/116th-congress/house-bill/7120?q=%7B%22search%22%3A%5B%22justice+in+policing%22%5D%7D&s=1&r=1">116th Congress Justice in Policing Act of 2020</a><br>
-							<a class="resource" href="https://www.ojp.gov/pdffiles1/nij/252038.pdf">National Institute of Justice: Using Artificial Intelligence to Address Criminal Justice Needs</a>
-						</span></p>
+				<p class="topic">Direct Sources</p>
+						<a class="resource" href="https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software">NIST Study Evaluates Effects of Race, Age, Sex on Facial Recognition Software</a><br><br>
+						<a class="resource" href="https://pages.nist.gov/frvt/reports/demographics/annexes/annex_01.pdf">NIST Face Recognition Demographics</a><br><br>
+						<a class="resource" href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf">NIST Face Recognition Identification</a><br><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/847">116th Congress Commercial Facial Recognition Privacy Act of 2019</a><br><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/senate-bill/4084">116th Congress Facial Recognition and Biometric Technology Moratorium Act of 2020</a><br><br>
+						<a class="resource" href="https://www.congress.gov/bill/116th-congress/house-bill/7120?q=%7B%22search%22%3A%5B%22justice+in+policing%22%5D%7D&s=1&r=1">116th Congress Justice in Policing Act of 2020</a><br><br>
+						<a class="resource" href="https://www.ojp.gov/pdffiles1/nij/252038.pdf">National Institute of Justice: Using Artificial Intelligence to Address Criminal Justice Needs</a>
 
-					<p class="topic"><span class="highlight topicname">Take Action<br><br>
-							<a class="resource" href="https://www.ajl.org/">Algorithmic Justice League</a><br>
-							<a class="resource" href="https://notechforice.com/">NoTechForIce</a><br>
-							<a class="resource" href="https://colorofchange.org/">Color of Change</a><br>
-							<a class="resource" href="https://d4bl.org/">Data for Black Lives</a><br>
-							<a class="resource" href="https://www.aclum.org/en/technology-liberty">Technology for Liberty</a><br>
-							<a class="resource" href="https://www.fightforthefuture.org/">Fight for the Future</a><br>
-							<a class="resource" href="https://movementalliance.org/blog/project/peoples-algorithmic-power-project/">Movement Alliance - People's Algorithmic Power Project </a>
-						</span></p>
+				<p class="topic">Take Action</p>
+						<a class="resource" href="https://www.ajl.org/">Algorithmic Justice League</a><br><br>
+						<a class="resource" href="https://notechforice.com/">NoTechForIce</a><br><br>
+						<a class="resource" href="https://colorofchange.org/">Color of Change</a><br><br>
+						<a class="resource" href="https://d4bl.org/">Data for Black Lives</a><br><br>
+						<a class="resource" href="https://www.aclum.org/en/technology-liberty">Technology for Liberty</a><br><br>
+						<a class="resource" href="https://www.fightforthefuture.org/">Fight for the Future</a><br><br>
+						<a class="resource" href="https://movementalliance.org/blog/project/peoples-algorithmic-power-project/">Movement Alliance - People's Algorithmic Power Project </a>
 
-					<p class="topic"><span class="highlight topicname">In the Arts<br><br>
-							<a class="resource" href="http://jingcailiu.com/wearable-face-projector/">Wearable Face Projector</a><br>
-							<a class="resource" href="https://cvdazzle.com/">Computer Vision Data Camouflage</a><br>
-							<a class="resource" href="https://www.pacegallery.com/journal/trevor-paglens-imagenet-roulette-featured-new-york-times/">ImageNet Roulette</a><br>
-							<a class="resource" href="https://www.cooperhewitt.org/events/current-exhibitions/face-values/">Face Values</a><br>
-							<a class="resource" href="https://ars.electronica.art/center/en/gendershades/">Gender Shades</a>
-						</span></p>
+				<p class="topic">In the Arts</p>
+						<a class="resource" href="http://jingcailiu.com/wearable-face-projector/">Wearable Face Projector</a><br><br>
+						<a class="resource" href="https://cvdazzle.com/">Computer Vision Data Camouflage</a><br><br>
+						<a class="resource" href="https://www.pacegallery.com/journal/trevor-paglens-imagenet-roulette-featured-new-york-times/">ImageNet Roulette</a><br><br>
+						<a class="resource" href="https://www.cooperhewitt.org/events/current-exhibitions/face-values/">Face Values</a><br><br>
+						<a class="resource" href="https://ars.electronica.art/center/en/gendershades/">Gender Shades</a>
 
-					<p class="credits creds">This is an ongoing collection effort by <a class="credits" href="https://calenchung.design/about">Calen Chung</a> for her <a class="credits" href="https://www.calenchung.design/home-1/thesis">Senior Thesis.</a></p>
-					<p class="credits">
-					Last updated April 2021</p>
-
-				</div>
+				<p class="credits">This is an ongoing collection effort by <a class="credits" href="https://calenchung.design/about">Calen Chung</a> for her <a class="credits" href="https://www.calenchung.design/home-1/thesis">Senior Communication Design Thesis.</a>
+					<br><br>
+					Last updated April 2021
+				</p>
+			</div>
 		</div>
+		<a href="#" id="close" class="button2">Close</a>
+		<!-- <button onclick="close()" class="button2">Close</button> -->
+
+		<script type="text/javascript">
+		// function myFunction() {
+		// 	document.getElementById("index").style.display = "block";
+		// };
+		document.getElementById("open").onclick = function() {open()};
+
+		function open() {
+		  document.getElementById("index").style.display = "block";;
+		}
+
+
+
+		document.getElementById("close").onclick = function() {close()};
+
+		function close() {
+		  document.getElementById("index").style.display = "none";;
+		}
+
+
+		</script>
+
 
 		<script type="module">
 
